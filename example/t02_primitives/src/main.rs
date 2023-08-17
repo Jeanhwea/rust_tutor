@@ -1,3 +1,6 @@
+#![allow(unused)]
+#![allow(dead_code)]
+
 mod s01_primitive;
 
 fn main() {

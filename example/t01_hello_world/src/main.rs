@@ -1,6 +1,3 @@
-#![warn(dead_code)]
-#![warn(unused)]
-
 // mod s01_format_print;
 mod s02_debug;
 
