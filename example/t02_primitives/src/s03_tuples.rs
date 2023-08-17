@@ -44,7 +44,7 @@ fn use_tuple() {
     // Tuples can be destructured to create bindings.
     let tuple = (1, "hello", 4.5, true);
 
-    // unpack
+    // unpack or destructure
     let (a, b, c, d) = tuple;
     println!("{:?}, {:?}, {:?}, {:?}", a, b, c, d);
 
