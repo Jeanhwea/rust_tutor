@@ -6,4 +6,7 @@
 
 fn main() {
     println!("Hello, world!");
+    s01_format_print::use_format_print();
 }
+
+mod s01_format_print;
