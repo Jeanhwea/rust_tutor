@@ -34,3 +34,19 @@ pub fn use_debug_trait() {
     // the results look. What if I want this to just show a `7`?
     println!("Now {:?} will print!", Deep(Structure(7)));
 }
+
+// Pretty print
+#[derive(Debug)]
+struct Person<'a> {
+    name: &'a str,
+    age: u8,
+}
+
+pub fn use_pretty_print() {
+    let name = "Peter";
+    let age = 23;
+    let peter = Person { name, age };
+
+    // print print pattern
+    println!("{:#?}", peter);
+}
