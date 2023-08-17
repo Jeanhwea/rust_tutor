@@ -40,7 +40,7 @@ pub fn use_format_print() {
     println!("{number:0>width$}", number = 1, width = 5);
 
     // Rust even checks to make sure the correct number of arguments are used.
-    println!("My name is {0}, {1} {0}", "Bond");
+    // println!("My name is {0}, {1} {0}", "Bond");
     // FIXME ^ Add the missing argument: "James"
 
     // Only types that implement fmt::Display can be formatted with `{}`. User-
