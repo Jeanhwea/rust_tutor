@@ -1,12 +1,9 @@
-// 编译: rustc main.rs
-// 运行: ./main
-
-// 使用 cargo 管理
-// cargo run
-
-fn main() {
-    println!("Hello, world!");
-    s01_format_print::use_format_print();
-}
+#![warn(dead_code)]
+#![warn(unused)]
 
 mod s01_format_print;
+mod s02_debug;
+
+fn main() {
+    s02_debug::use_debug_trait();
+}
