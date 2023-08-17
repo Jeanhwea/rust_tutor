@@ -1,4 +1,4 @@
-pub fn use_primitives() {
+fn use_primitives() {
     // Variables can be type annotated.
     let logical: bool = true;
 
