@@ -1,4 +1,4 @@
-// rustc --crate-type=lib s01_create_library.rs
+// rustc --crate-type=lib --crate-name=rary s01_create_library.rs
 // $ ls lib*
 // libs01_create_library.rlib
 
