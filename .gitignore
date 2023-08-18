@@ -1,3 +1,4 @@
 target
 TAGS
 debug.run
+/example/**/*.rlib
