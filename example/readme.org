@@ -6,4 +6,4 @@
 
 
 * 链接
-1. Rust by Example | [[https://doc.rust-lang.org/rust-by-example][link]]
+1. Rust by Example | [[https://doc.rust-lang.org/rust-by-example][link]] | [[https://rustwiki.org/zh-CN/rust-by-example/index.html][zh-CN]]
