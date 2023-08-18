@@ -1,3 +1,8 @@
+//
+// FnOnce: 当指定这个Trait时, 匿名函数内访问的外部变量必须拥有所有权.
+// FnMut:  当指定这个Trait时, 匿名函数可以改变外部变量的值.
+// Fn:     当指定这个Trait时, 匿名函数只能读取(borrow value immutably)变量值.
+
 // A function which takes a closure as an argument and calls it.
 // <F> denotes that F is a "Generic type parameter"
 fn apply<F>(f: F)
