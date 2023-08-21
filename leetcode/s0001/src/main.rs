@@ -2,17 +2,16 @@ use std::collections::HashMap;
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut map = HashMap::with_capacity(nums.len());
+        let mut cache: HashMap<i32, i32> = HashMap::new();
 
-        for i in 0..nums.len() {
-            if let Some(k) = map.get(&(target - nums[i])) {
-                if *k != i {
-                    return vec![*k as i32, i as i32];
-                }
+        for (i, v) in nums.iter().enumerate() {
+            if let Some(&j) = cache.get(&(target - *v)) {
+                return vec![i as i32, j as i32];
             }
-            map.insert(nums[i], i);
+            cache.insert(*v as i32, i as i32);
         }
-        panic!("not found!");
+
+        panic!("NOT_FOUND");
     }
 }
 
