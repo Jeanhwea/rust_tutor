@@ -1,0 +1,33 @@
+[package]
+name = "rust_totur"
+version = "0.0.7"
+authors = ["Jinghui Hu <hujinghui@buaa.edu.cn>"]
+
+[workspace]
+members = [
+  "example/t01_hello_world",
+  "example/t02_primitives",
+  "example/t03_custom_types",
+  "example/t04_variable_bindings",
+  "example/t05_types",
+  "example/t06_conversion",
+  "example/t07_expressions",
+  "example/t08_control_flow",
+  "example/t09_functions",
+  "example/t10_modules",
+  "example/t11_crates",
+  "example/t12_cargo",
+  "example/t13_attributes",
+  "example/t14_generics",
+  "example/t15_scoping_rules",
+  "example/t16_traits",
+  "example/t17_macro_rules",
+  "example/t18_error_handling",
+  "example/t19_std_library_types",
+  "example/t20_std_misc",
+  "example/t21_testing",
+  "example/t22_unsafe_operations",
+  "example/t23_compatibility",
+  "example/t24_meta",
+  "leetcode/s0001",
+]
