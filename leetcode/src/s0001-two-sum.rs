@@ -46,19 +46,6 @@ use std::collections::HashMap;
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut cache: HashMap<i32, i32> = HashMap::new();
-
-        for (i, v) in nums.iter().enumerate() {
-            if let Some(&j) = cache.get(&(target - *v)) {
-                return vec![i as i32, j as i32];
-            }
-            cache.insert(*v as i32, i as i32);
-        }
-
-        panic!("NOT_FOUND");
-    }
-
-    pub fn two_sum_2(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut cache: HashMap<i32, i32> = HashMap::with_capacity(nums.len());
 
         for (i, v) in nums.iter().enumerate() {
@@ -74,6 +61,20 @@ impl Solution {
 }
 // SOLUTION_END
 
+impl Solution {
+    pub fn two_sum_v2(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut cache: HashMap<i32, i32> = HashMap::new();
+
+        for (i, v) in nums.iter().enumerate() {
+            if let Some(&j) = cache.get(&(target - *v)) {
+                return vec![i as i32, j as i32];
+            }
+            cache.insert(*v as i32, i as i32);
+        }
+
+        panic!("NOT_FOUND");
+    }
+}
 struct Solution {}
 
 fn main() {
