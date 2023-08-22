@@ -79,7 +79,7 @@ impl Solution {
     }
 }
 
-struct Solution {}
+struct Solution;
 
 fn main() {
     let nums = vec![3, 2, 4];
@@ -88,6 +88,6 @@ fn main() {
     let ans = Solution::two_sum(nums.clone(), target);
     println!("ans = {:?}", ans);
 
-    let ans2 = Solution::two_sum_2(nums.clone(), target);
+    let ans2 = Solution::two_sum_v2(nums.clone(), target);
     println!("ans2 = {:?}", ans2);
 }
