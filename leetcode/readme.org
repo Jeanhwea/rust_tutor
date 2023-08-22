@@ -37,7 +37,7 @@ Config leetcode-cli, get csrf, session from leetcode.cn
   scripts = 'scripts'
 #+END_SRC
 
-* Coding
+* Coding Practice
 #+BEGIN_SRC sh
   leetcode edit 1
   leetcode test 1
