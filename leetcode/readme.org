@@ -15,13 +15,15 @@ Clone and Install leetcode-cli | [[https://github.com/Jeanhwea/rust-leetcode-cli
 
 Config leetcode-cli, get csrf, session from leetcode.cn
 #+BEGIN_SRC conf
+  # ~/.leetcode/leetcode.toml
+
   [code]
   editor = 'emacsclient'
   editor_args = ['--no-wait']
   lang = 'rust'
   edit_code_marker = true
-  start_marker = "SOLUTION_BEGIN"
-  end_marker = "SOLUTION_END"
+  start_marker = "BEG_SUBMIT"
+  end_marker = "END_SUBMIT"
   comment_problem_desc = true
   comment_leading = "//"
   test = false

@@ -30,23 +30,13 @@
 // Output: [8,9,9,9,0,0,0,1]
 //
 //
-// Constraints:
 //
+// Constraints:
 //
 //      The number of nodes in each linked list is in the range [1, 100].
 //      0 <= Node.val <= 9
 //      It is guaranteed that the list represents a number that does not have leading zeros.
 //
-
-// SOLUTION_BEGIN
-impl Solution {
-    pub fn add_two_numbers(
-        a: Option<Box<ListNode>>,
-        b: Option<Box<ListNode>>,
-    ) -> Option<Box<ListNode>> {
-    }
-}
-// SOLUTION_END
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -60,4 +50,45 @@ impl ListNode {
     fn new(val: i32) -> Self {
         ListNode { next: None, val }
     }
+}
+
+// BEG_SUBMIT
+impl Solution {
+    pub fn add_two_numbers(
+        l1: Option<Box<ListNode>>,
+        l2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
+        let mut result = None;
+        let mut tail = &mut result;
+        let mut state = (l1, l2, 0, 0); // (list1, list2, sum, carry)
+        loop {
+            state = match state {
+                (None, None, _, 0) => break,
+                (None, None, _, carry) => (None, None, carry, 0),
+                (Some(a), None, _, carry) | (None, Some(a), _, carry) if a.val + carry >= 10 => {
+                    (a.next, None, a.val + carry - 10, 1)
+                }
+                (Some(a), None, _, carry) | (None, Some(a), _, carry) => {
+                    (a.next, None, a.val + carry, 0)
+                }
+                (Some(a), Some(b), _, carry) if a.val + b.val + carry >= 10 => {
+                    (a.next, b.next, a.val + b.val + carry - 10, 1)
+                }
+                (Some(a), Some(b), _, carry) => (a.next, b.next, a.val + b.val + carry, 0),
+            };
+            *tail = Some(Box::new(ListNode::new(state.2)));
+            tail = &mut tail.as_mut().unwrap().next;
+        }
+        result
+    }
+}
+// END_SUBMIT
+
+struct Solution;
+
+fn main() {
+    let l1 = Some(Box::new(ListNode::new(1)));
+    let l2 = Some(Box::new(ListNode::new(2)));
+    let ans = Solution::add_two_numbers(l1, l2);
+    println!("ans = {:?}", ans);
 }

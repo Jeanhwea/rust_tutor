@@ -44,7 +44,7 @@
 // Follow-up: Can you come up with an algorithm that is less than O(n²) time
 // complexity?
 
-// SOLUTION_BEGIN
+// BEG_SUBMIT
 use std::collections::HashMap;
 
 impl Solution {
@@ -62,7 +62,7 @@ impl Solution {
         panic!("NOT_FOUND");
     }
 }
-// SOLUTION_END
+// END_SUBMIT
 
 impl Solution {
     pub fn two_sum_v2(nums: Vec<i32>, target: i32) -> Vec<i32> {
