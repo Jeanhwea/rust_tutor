@@ -41,7 +41,7 @@
 //
 // Follow-up: Can you come up with an algorithm that is less than O(n²) time complexity?
 
-// start_marker
+// SOLUTION_BEGIN
 use std::collections::HashMap;
 
 impl Solution {
@@ -72,17 +72,17 @@ impl Solution {
         panic!("NOT_FOUND");
     }
 }
-// end_marker
+// SOLUTION_END
 
-// struct Solution {}
+struct Solution {}
 
-// fn main() {
-//     let nums = vec![3, 2, 4];
-//     let target = 6;
+fn main() {
+    let nums = vec![3, 2, 4];
+    let target = 6;
 
-//     let ans = Solution::two_sum(nums.clone(), target);
-//     println!("ans = {:?}", ans);
+    let ans = Solution::two_sum(nums.clone(), target);
+    println!("ans = {:?}", ans);
 
-//     let ans2 = Solution::two_sum_2(nums.clone(), target);
-//     println!("ans2 = {:?}", ans2);
-// }
+    let ans2 = Solution::two_sum_2(nums.clone(), target);
+    println!("ans2 = {:?}", ans2);
+}
