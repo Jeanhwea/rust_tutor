@@ -48,8 +48,6 @@ Config leetcode-cli, get csrf, session from leetcode.cn
 
 *  LeetCode Problem Set
 ** 🔥 LeetCode 热题 [[https://leetcode.cn/problem-list/2cktkvj/][HOT 100]]
-1
-2
 3
 4
 5
