@@ -1,6 +1,6 @@
 [package]
 name = "rust_totur"
-version = "0.0.8"
+version = "0.0.9"
 edition = "2021"
 authors = ["Jinghui Hu <hujinghui@buaa.edu.cn>"]
 
