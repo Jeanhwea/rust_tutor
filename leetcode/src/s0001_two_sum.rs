@@ -53,7 +53,7 @@ impl Solution {
 
         for (i, v) in nums.iter().enumerate() {
             match cache.get(&(target - *v)) {
-                Some(&j) => return vec![i as i32, j as i32],
+                Some(&j) => return vec![j as i32, i as i32],
                 None => {}
             }
             cache.insert(*v as i32, i as i32);
@@ -70,7 +70,7 @@ impl Solution {
 
         for (i, v) in nums.iter().enumerate() {
             if let Some(&j) = cache.get(&(target - *v)) {
-                return vec![i as i32, j as i32];
+                return vec![j as i32, i as i32];
             }
             cache.insert(*v as i32, i as i32);
         }
@@ -90,4 +90,15 @@ fn main() {
 
     let ans2 = Solution::two_sum_v2(nums.clone(), target);
     println!("ans2 = {:?}", ans2);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_1() {
+        assert_eq!(vec![0, 1], Solution::two_sum(vec![2, 7, 11, 15], 9));
+        assert_eq!(vec![1, 2], Solution::two_sum(vec![3, 2, 4], 6));
+    }
 }
