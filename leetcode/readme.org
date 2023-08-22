@@ -1,0 +1,45 @@
+#+TITLE: LeetCode
+#+AUTHOR: Jinghui Hu
+#+EMAIL: hujinghui@buaa.edu.cn
+#+DATE: <2023-08-22 Tue 08:51:11>
+#+STARTUP: overview num indent
+
+
+* Setup Environment
+Clone and Install leetcode-cli | [[https://github.com/Jeanhwea/rust-leetcode-cli][link]]
+#+BEGIN_SRC sh
+  git clone https://github.com/Jeanhwea/rust-leetcode-cli.git
+  cd rust-leetcode-cli
+  cargo install --path .
+#+END_SRC
+
+Config leetcode-cli, get csrf, session from leetcode.cn
+#+BEGIN_SRC conf
+  [code]
+  editor = 'emacsclient'
+  editor_args = ['--no-wait']
+  lang = 'rust'
+  edit_code_marker = true
+  start_marker = "SOLUTION_BEGIN"
+  end_marker = "SOLUTION_END"
+  comment_problem_desc = true
+  comment_leading = "//"
+  test = false
+
+  [cookies]
+  csrf = '...'
+  session = 'ey...'
+
+  [storage]
+  cache = 'Problems'
+  code = '/home/jeffrey/code/jeanhwea/rust_tutor/leetcode/src'
+  root = '~/.leetcode'
+  scripts = 'scripts'
+#+END_SRC
+
+* Coding
+#+BEGIN_SRC sh
+  leetcode edit 1
+  leetcode test 1
+  leetcode submit 1
+#+END_SRC
