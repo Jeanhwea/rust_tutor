@@ -7,4 +7,6 @@ authors = ["Jinghui Hu <hujinghui@buaa.edu.cn>"]
 [dependencies]
 
 [workspace]
-members = []
+members = [
+  "leetcode",
+]
