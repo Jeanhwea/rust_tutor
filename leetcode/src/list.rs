@@ -46,3 +46,10 @@ macro_rules! list {
         $crate::ListNode::from_vec(vec![$($x),+])
     };
 }
+
+fn main() {
+    let a = ListNode::from_vec(vec![1, 2, 3]);
+    println!("{:?}", a);
+    let b = ListNode::into_vec(a);
+    println!("{:?}", b);
+}
