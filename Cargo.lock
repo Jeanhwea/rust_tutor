@@ -7,5 +7,9 @@ name = "leetcode"
 version = "0.1.0"
 
 [[package]]
+name = "playground"
+version = "0.1.0"
+
+[[package]]
 name = "rust_totur"
 version = "0.0.10"

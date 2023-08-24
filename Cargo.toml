@@ -9,4 +9,5 @@ authors = ["Jinghui Hu <hujinghui@buaa.edu.cn>"]
 [workspace]
 members = [
   "leetcode",
+  "playground",
 ]
